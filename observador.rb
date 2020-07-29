@@ -4,9 +4,9 @@ require_relative 'algoritmos-de-calculo'
 class EquationCreator
     def create(coef)
         #extraindo coeficientes
-        a=coef[:a]
-        b=coef[:b]
-        c=coef[:c]
+        a= coef[:a]
+        b= coef[:b]
+        c= coef[:c]
         #variavel formadora da equacao
         eq=nil
         #preparando a equação
