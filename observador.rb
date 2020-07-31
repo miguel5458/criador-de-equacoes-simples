@@ -4,9 +4,7 @@ require_relative 'algoritmos-de-calculo'
 class EquationCreator
     def create(coef)
         #extraindo coeficientes
-        a= coef[:a]
-        b= coef[:b]
-        c= coef[:c]
+        a,b,c=coef[:a],coef[:b],coef[:c]
         #variavel formadora da equacao
         eq=nil
         #preparando a equação
@@ -22,7 +20,7 @@ end
 class IdentifierPattern < EquationCreator
     def identify(point)
         #ternaria DetLinear
-        point != nil && point.size==4 ? dl=create(DetLinear.calcDet(point)) : nil
-            return dl
+        point != nil && point.size==4 ? result=create(DetLinear.calcDet(point)) : nil
+            return result
     end
 end
